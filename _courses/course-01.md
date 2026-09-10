@@ -18,7 +18,7 @@ research._
 
 This Course is about learning how to be professional in careers with communication. It covers building confidence while speaking and presenting, developing teamwork and leadership skills as well as understaffing communication ethically and how to manage conflict. I'm Taking this course because while it is required to graduate I feel it would excel my skills that are needed to succeed in the corporate world. I'm hoping to use this class and what I learn to push me far in my career postgrad. 
 
-## About Professor Name
+## About Dr. Widgeon
 
 Dr. Widgeon graduated from the University of Alabama at Birmingham earning a bachelors degree and went on to get her masters at University of West Florida. She then got her Ph.D. at University of Alabama. She teaches all communication courses to help students in public speaking, teamwork, leadership and interviewing. Her goal is to help communication students succeed in the professional world. 
 
@@ -34,6 +34,4 @@ Dr. Widgeon does not have any publications but she has scholarly presentations s
 
 ### Service and outreach
 
-Describe any service or outreach work your professor is involved in — committee
-work, community partnerships, public scholarship, mentoring programs, or similar
-efforts beyond their research and teaching.
+Dr. Widgeon is a part of College of Liberal Arts and Human Sciences Faculty Council, where she represents the School of Communication. She has also been involved in mentoring and supporting students in communication, including serving on graduate research committees.
