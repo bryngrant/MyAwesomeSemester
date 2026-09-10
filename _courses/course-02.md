@@ -1,12 +1,12 @@
 ---
 course_number: 2
-course_code: "COMM XXXX"
-course_title: "Course Title 2"
-meeting_time: "TR 9:30–10:45 AM"
-location: "Building Room ###"
-instructor_name: "Professor Name"
-instructor_title: "Associate Professor"
-instructor_department: "Department Name"
+course_code: "ADV 2134"
+course_title: "Intro to Health Communication"
+meeting_time: "MW 9:05–10:55 AM"
+location: "Surge #103A"
+instructor_name: "Dr. Hannah Shinault Deuyour"
+instructor_title: "Professor"
+instructor_department: "Associate Director of the School of Communication"
 ---
 
 _This is a placeholder page. Replace the front matter above with this course's real
@@ -16,31 +16,22 @@ research._
 
 ## About this course
 
-Write a short paragraph about the course itself: what it covers, why you're taking
-it, and what you're hoping to get out of it this semester.
+This course focuses on how communication affects health, healthcare, and the way people understand health issues. We are expected to learn about cultural beliefs about health, health promotion campaigns and health behaviors. I am taking this course because I want to have a future in medical device sales and taking this would help further my knowledge to succeed in this world. I hope to get a better understanding of how communication in health can affect people. 
 
-## About Professor Name
+## About Hannah Deuyour
 
-Write a short bio paragraph about your professor: their academic background, what
-they teach, and anything else that gives your friends and family a sense of who
-they are.
+Dr. Deuyour earned her Ph.D. in Communication and Information at the University of Tennessee. She then earned her Masters in Public Health at Virginia Tech. she teaches many courses such as Intro to Health Communication, Issues in Health Communication, and graduate-level Health Communication. She also helped develop Virginia Tech’s Health Communication minor and graduate certificate.
 
 ### Research interests
 
-Describe what your professor researches. Look up their faculty profile page, their
-department bio, or their personal/lab website and summarize their main research
-areas in your own words.
+She researches Health Communication which is where her expertise comes from. She studies how communication can help people better understand health information and influence the decisions they make about their health.
 
 ### Publications
 
-List a few of your professor's notable publications (articles, books, book
-chapters). A simple bulleted list works well:
-
-- Citation or title of a representative publication
-- Citation or title of another publication
+She doesn't have any publications but has a few pieces of academic work. 
+-“Understanding Perceptions of Breast Health in a Southern Appalachian Community” — her 2016 Ph.D. dissertation at the University of Tennessee.
+-“Extending Belonging in the Classroom” - conference that she co-authored with Claire Boor, Laura Purcell, Zack Sowder, and Brandi Quesenberry.
 
 ### Service and outreach
 
-Describe any service or outreach work your professor is involved in — committee
-work, community partnerships, public scholarship, mentoring programs, or similar
-efforts beyond their research and teaching.
+She is part of faculty advisor for Lambda Pi Eta, the communication honor society, and Spark, a student organization for creative students.
