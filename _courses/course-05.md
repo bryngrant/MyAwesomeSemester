@@ -9,7 +9,6 @@ instructor_title: "Associate Dean of Strategic Initiatives and Chief Technology 
 instructor_department: "College of Liberal Arts and Human Sciences"
 ---
 
-
 ## About this course
 
 The point of this class is surrounded by AI. However, it also highlights explaining communication theories, Analyze AI-generated and AI-distributed texts and producing professional documents. I am taking this course for my major but also because AI interest me and it is rapidly growing. I hope to get out of this class more knowledge on AI and become better at creating writings and documents. 
