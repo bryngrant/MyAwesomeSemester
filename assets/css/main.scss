@@ -1,0 +1,223 @@
+---
+---
+// ------------------------------------------------------------------
+// My Awesome Semester — basic black & white starter theme
+// This is intentionally plain. Swap the tokens in the :root block
+// below to re-skin the site — see the README for how to do that
+// with HokieAI's help.
+// ------------------------------------------------------------------
+
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-ink: #111111;
+  --color-ink-soft: #555555;
+  --color-line: #cccccc;
+  --color-accent: #000000;
+  --color-white: #ffffff;
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+
+  --radius: 0px;
+  --shadow: none;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-ink);
+  text-decoration: underline;
+}
+a:hover { color: var(--color-accent); }
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+// ---------------------------------------------------------------- header
+.site-header {
+  border-bottom: 2px solid var(--color-ink);
+
+  .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.site-brand {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}
+
+.site-nav {
+  display: flex;
+  gap: 20px;
+
+  a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+}
+
+// ------------------------------------------------------------------ page
+.page {
+  padding-top: 40px;
+  padding-bottom: 64px;
+}
+
+.home-intro {
+  max-width: 640px;
+  margin-bottom: 8px;
+}
+
+// -------------------------------------------------------- course directory
+.course-directory__heading {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 10px;
+  margin-top: 48px;
+}
+
+.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.course-list__item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--color-line);
+
+  &:first-child { border-top: 1px solid var(--color-line); }
+}
+
+.course-list__link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--color-ink);
+}
+
+.course-list__code {
+  font-family: var(--font-display);
+  font-weight: 700;
+  min-width: 7em;
+}
+
+.course-list__title {
+  color: var(--color-ink);
+}
+
+.course-list__link:hover .course-list__title {
+  text-decoration: underline;
+}
+
+.course-list__meta {
+  margin: 6px 0 0;
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+}
+
+// -------------------------------------------------------------- course page
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.course__header {
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.course__code {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  margin: 0 0 4px;
+}
+
+.course__title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  margin: 0 0 8px;
+}
+
+.course__meta {
+  margin: 0 0 4px;
+  color: var(--color-ink-soft);
+}
+
+.course__instructor {
+  margin: 0;
+  font-weight: 600;
+}
+
+.course__body {
+  font-size: 1.05rem;
+
+  p:first-child { margin-top: 0; }
+
+  h2 {
+    font-family: var(--font-display);
+    margin-top: 2em;
+    border-bottom: 1px solid var(--color-line);
+    padding-bottom: 6px;
+  }
+
+  h3 { margin-top: 1.6em; }
+
+  ul, ol { padding-left: 1.4em; }
+}
+
+// ------------------------------------------------------------------ footer
+.site-footer {
+  border-top: 2px solid var(--color-ink);
+  margin-top: 48px;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+
+  a { color: var(--color-ink); }
+}
+
+.site-footer__hint {
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .course__title { font-size: 1.6rem; }
+}

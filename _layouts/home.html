@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+<body>
+{% include header.html %}
+
+<main class="wrap page">
+  {{ content }}
+
+  <section id="courses" class="course-directory">
+    <h2 class="course-directory__heading">This Semester's Courses</h2>
+    <ol class="course-list">
+      {% assign courses = site.courses | sort: "course_number" %}
+      {% for course in courses %}
+      <li class="course-list__item">
+        <a class="course-list__link" href="{{ course.url | relative_url }}">
+          <span class="course-list__code">{{ course.course_code }}</span>
+          <span class="course-list__title">{{ course.course_title }}</span>
+        </a>
+        <p class="course-list__meta">
+          {{ course.instructor_name }}{% if course.meeting_time %} &middot; {{ course.meeting_time }}{% endif %}{% if course.location %} &middot; {{ course.location }}{% endif %}
+        </p>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+</main>
+
+{% include footer.html %}
+</body>
+</html>

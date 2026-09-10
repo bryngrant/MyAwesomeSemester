@@ -1,0 +1,62 @@
+# ------------------------------------------------------------------
+# Site configuration
+# Replace these values with your own before publishing.
+# ------------------------------------------------------------------
+
+title: My Awesome Semester
+tagline: A COMM major's course lineup, one class at a time
+description: >-
+  A Jekyll template for building a "My Awesome Semester" course-and-teacher
+  site. Each course gets its own page with the class details plus a profile
+  of the professor teaching it -- their research interests, publications,
+  and service and outreach work. Replace this description with your own.
+
+# GitHub Pages project-site settings.
+# TODO: set `url` to your own GitHub Pages domain (e.g. "https://<your-username>.github.io"),
+# and update `baseurl` to match this repo's name: "/<repo-name>"
+url: "https://your-username.github.io"
+baseurl: "/myawesomesemester"
+
+author: Your Name
+email: your-email@vt.edu
+
+# ------------------------------------------------------------------
+# Build settings
+# ------------------------------------------------------------------
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: /:categories/:title/
+
+collections:
+  courses:
+    output: true
+    permalink: /courses/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: courses
+    values:
+      layout: course
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor

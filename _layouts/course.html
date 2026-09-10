@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+<body>
+{% include header.html %}
+
+<main class="wrap page course-page">
+  <a class="back-link" href="{{ '/' | relative_url }}#courses">&larr; Back to all courses</a>
+
+  <article class="course">
+    <header class="course__header">
+      <p class="course__code">{{ page.course_code }}</p>
+      <h1 class="course__title">{{ page.course_title }}</h1>
+      <p class="course__meta">
+        {% if page.meeting_time %}{{ page.meeting_time }}{% endif %}{% if page.location %} &middot; {{ page.location }}{% endif %}
+      </p>
+      <p class="course__instructor">
+        Taught by {{ page.instructor_name }}{% if page.instructor_title %}, {{ page.instructor_title }}{% endif %}{% if page.instructor_department %}, {{ page.instructor_department }}{% endif %}
+      </p>
+    </header>
+
+    <div class="course__body">
+      {{ content }}
+    </div>
+  </article>
+</main>
+
+{% include footer.html %}
+</body>
+</html>
