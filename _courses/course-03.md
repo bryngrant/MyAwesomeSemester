@@ -9,7 +9,6 @@ instructor_title: "Professor"
 instructor_department: "Pamplin College of Business"
 ---
 
-
 ## About this course
 
 This course covers all things sales. It is meant to apply actual concepts to sales theories as well as practicing sales and business presentations. I am taking this class for my minor but also to improve my sales skills for my future career in medical device sales. I want to get out of this course how to sell and be a successful sales person. 
