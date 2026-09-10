@@ -9,7 +9,6 @@ instructor_title: "Professor"
 instructor_department: "Associate Director of the School of Communication"
 ---
 
-
 ## About this course
 
 This course focuses on how communication affects health, healthcare, and the way people understand health issues. We are expected to learn about cultural beliefs about health, health promotion campaigns and health behaviors. I am taking this course because I want to have a future in medical device sales and taking this would help further my knowledge to succeed in this world. I hope to get a better understanding of how communication in health can affect people. 
