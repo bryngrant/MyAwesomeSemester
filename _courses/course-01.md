@@ -9,7 +9,6 @@ instructor_title: "Professor"
 instructor_department: "School of Communication"
 ---
 
-
 ## About this course
 
 This Course is about learning how to be professional in careers with communication. It covers building confidence while speaking and presenting, developing teamwork and leadership skills as well as understaffing communication ethically and how to manage conflict. I'm Taking this course because while it is required to graduate I feel it would excel my skills that are needed to succeed in the corporate world. I'm hoping to use this class and what I learn to push me far in my career postgrad. 
