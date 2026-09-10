@@ -9,7 +9,6 @@ instructor_title: "Professor of Practice"
 instructor_department: "College of Liberal Arts and Human Sciences"
 ---
 
-
 ## About this course
 
 The purpose of this class is to improve Development, concepts, and impact of sports media, including roles and responsibilities of
