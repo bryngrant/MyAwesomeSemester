@@ -14,10 +14,10 @@ description: >-
 # GitHub Pages project-site settings.
 # TODO: set `url` to your own GitHub Pages domain (e.g. "https://<your-username>.github.io"),
 # and update `baseurl` to match this repo's name: "/<repo-name>"
-url: "https://your-username.github.io"
+url: "https://bryngrant.github.io"
 baseurl: "/myawesomesemester"
 
-author: Your Name
+author: Bryn Grant
 email: your-email@vt.edu
 
 # ------------------------------------------------------------------
