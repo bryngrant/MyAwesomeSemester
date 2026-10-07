@@ -1,9 +1,10 @@
-<header class="site-header">
+<header class="site-header" role="banner" aria-label="Site header">
   <div class="wrap">
-    <a class="site-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav class="site-nav">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/' | relative_url }}#courses">Courses</a>
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">{{ site.title }}</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/transmission-view-and-limits/' | relative_url }}" {% if page.url == '/transmission-view-and-limits/' %}aria-current="page"{% endif %}>Transmission view</a>
+      <a href="{{ '/how-i-built-this-site/' | relative_url }}" {% if page.url == '/how-i-built-this-site/' %}aria-current="page"{% endif %}>How I built this site</a>
     </nav>
   </div>
 </header>
