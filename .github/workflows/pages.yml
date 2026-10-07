@@ -1,15 +1,8 @@
 name: Build and deploy Jekyll site
 
-# Builds run on every commit, so a broken page is caught right away:
-#  - push to main:            build, then deploy to GitHub Pages
-#  - commit on a pull request: build only, to check it before merging
-#  - workflow_dispatch:        lets you re-run a deploy by hand from the Actions tab
 on:
   push:
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -36,16 +29,12 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      # Only push a deployable copy of the site when this build is for a
-      # real publish (a commit on main) rather than a pull-request check.
       - name: Upload artifact
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
           path: "_site"
 
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     permissions:
       pages: write
       id-token: write

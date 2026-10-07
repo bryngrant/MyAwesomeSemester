@@ -1,26 +1,22 @@
 ---
 ---
-// ------------------------------------------------------------------
-// My Awesome Semester — basic black & white starter theme
-// This is intentionally plain. Swap the tokens in the :root block
-// below to re-skin the site — see the README for how to do that
-// with HokieAI's help.
-// ------------------------------------------------------------------
 
 :root {
-  --color-bg: #ffffff;
+  --color-bg: #f4f7ff;
   --color-surface: #ffffff;
-  --color-ink: #111111;
-  --color-ink-soft: #555555;
-  --color-line: #cccccc;
-  --color-accent: #000000;
+  --color-ink: #10213f;
+  --color-ink-soft: #355184;
+  --color-line: #c9d6f5;
+  --color-accent: #1f4fbf;
+  --color-accent-dark: #143a94;
+  --color-focus: #ffbf47;
   --color-white: #ffffff;
 
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Merriweather", Georgia, "Times New Roman", serif;
 
-  --radius: 0px;
-  --shadow: none;
+  --radius: 12px;
+  --shadow: 0 12px 24px rgba(16, 33, 63, 0.08);
 }
 
 * { box-sizing: border-box; }
@@ -33,32 +29,57 @@ html, body {
 body {
   font-family: var(--font-body);
   color: var(--color-ink);
-  background-color: var(--color-bg);
-  line-height: 1.6;
+  background: linear-gradient(180deg, #eef3ff 0%, var(--color-bg) 280px);
+  line-height: 1.65;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-focus);
+  color: #000;
+  padding: 10px 14px;
+  border-radius: 0 0 var(--radius) 0;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  left: 0;
 }
 
 a {
-  color: var(--color-ink);
+  color: var(--color-accent-dark);
   text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
+
 a:hover { color: var(--color-accent); }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
 .wrap {
-  max-width: 860px;
+  max-width: 940px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-// ---------------------------------------------------------------- header
 .site-header {
-  border-bottom: 2px solid var(--color-ink);
+  border-bottom: 1px solid var(--color-line);
+  background-color: var(--color-surface);
+  box-shadow: 0 2px 12px rgba(16, 33, 63, 0.04);
 
   .wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 14px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -66,158 +87,95 @@ a:hover { color: var(--color-accent); }
 
 .site-brand {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--color-ink);
   text-decoration: none;
-
-  &:hover { text-decoration: underline; }
 }
 
 .site-nav {
   display: flex;
-  gap: 20px;
+  gap: 18px;
+  flex-wrap: wrap;
 
   a {
-    font-weight: 600;
     text-decoration: none;
+    font-weight: 700;
+    color: var(--color-accent-dark);
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
   }
-  a:hover { text-decoration: underline; }
+
+  a:hover,
+  a[aria-current="page"] {
+    border-bottom-color: var(--color-accent);
+  }
 }
 
-// ------------------------------------------------------------------ page
 .page {
   padding-top: 40px;
   padding-bottom: 64px;
 }
 
-.home-intro {
-  max-width: 640px;
-  margin-bottom: 8px;
-}
-
-// -------------------------------------------------------- course directory
-.course-directory__heading {
+h1, h2, h3 {
   font-family: var(--font-display);
-  font-size: 1.4rem;
-  border-bottom: 1px solid var(--color-line);
-  padding-bottom: 10px;
-  margin-top: 48px;
+  color: #0f2a5a;
+  line-height: 1.25;
 }
 
-.course-list {
-  list-style: none;
+.home-intro,
+.lens-directory,
+.content-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px;
+}
+
+.lens-directory {
+  margin-top: 26px;
+}
+
+.lens-list {
   margin: 0;
-  padding: 0;
+  padding-left: 1.3rem;
 }
 
-.course-list__item {
-  padding: 18px 0;
-  border-bottom: 1px solid var(--color-line);
-
-  &:first-child { border-top: 1px solid var(--color-line); }
+.lens-list li + li {
+  margin-top: 8px;
 }
 
-.course-list__link {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 10px;
-  text-decoration: none;
-  color: var(--color-ink);
-}
-
-.course-list__code {
-  font-family: var(--font-display);
-  font-weight: 700;
-  min-width: 7em;
-}
-
-.course-list__title {
-  color: var(--color-ink);
-}
-
-.course-list__link:hover .course-list__title {
-  text-decoration: underline;
-}
-
-.course-list__meta {
-  margin: 6px 0 0;
+.article-meta {
+  margin: 0 0 18px;
   color: var(--color-ink-soft);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
-// -------------------------------------------------------------- course page
 .back-link {
   display: inline-block;
-  margin-bottom: 24px;
-  font-weight: 600;
+  margin-bottom: 16px;
+  font-weight: 700;
 }
 
-.course__header {
-  border-bottom: 1px solid var(--color-line);
-  padding-bottom: 20px;
-  margin-bottom: 24px;
-}
-
-.course__code {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
+.site-footer {
+  border-top: 1px solid var(--color-line);
+  margin-top: 24px;
+  padding: 28px 0;
+  text-align: center;
+  font-size: 0.95rem;
   color: var(--color-ink-soft);
-  margin: 0 0 4px;
+  background: var(--color-surface);
 }
 
-.course__title {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  margin: 0 0 8px;
-}
-
-.course__meta {
-  margin: 0 0 4px;
-  color: var(--color-ink-soft);
-}
-
-.course__instructor {
-  margin: 0;
-  font-weight: 600;
-}
-
-.course__body {
-  font-size: 1.05rem;
-
-  p:first-child { margin-top: 0; }
-
-  h2 {
-    font-family: var(--font-display);
-    margin-top: 2em;
-    border-bottom: 1px solid var(--color-line);
-    padding-bottom: 6px;
+@media (max-width: 700px) {
+  .home-intro,
+  .lens-directory,
+  .content-panel {
+    padding: 20px;
   }
 
-  h3 { margin-top: 1.6em; }
-
-  ul, ol { padding-left: 1.4em; }
-}
-
-// ------------------------------------------------------------------ footer
-.site-footer {
-  border-top: 2px solid var(--color-ink);
-  margin-top: 48px;
-  padding: 24px 0;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--color-ink-soft);
-
-  a { color: var(--color-ink); }
-}
-
-.site-footer__hint {
-  opacity: 0.7;
-  font-size: 0.8rem;
-}
-
-@media (max-width: 600px) {
-  .course__title { font-size: 1.6rem; }
+  .site-brand {
+    font-size: 1.2rem;
+  }
 }
